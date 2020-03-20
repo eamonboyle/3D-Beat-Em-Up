@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1168502672234655252}
   - component: {fileID: 1168502672234655259}
   - component: {fileID: 8358176936370409509}
+  - component: {fileID: 1610877068615327432}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -78,6 +79,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 2
   zSpeed: 1.5
+--- !u!114 &1610877068615327432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168502672234655254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c30c1461fe7d641b66bb5808d9f113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7895931888908016872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168502672463088973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe5a8f40b467074bb7c133dc48e3e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1168502672462989891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,6 +172,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: be03966971b1d44f6b5fd7a3d3721881, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+--- !u!1 &1168502672463088973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1168502672462989891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1168502672463384749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400110, guid: 68ff77d4e131db34586dc6f268e92dca,
