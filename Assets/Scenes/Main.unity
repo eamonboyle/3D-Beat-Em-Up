@@ -497,11 +497,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1168502672463088973, guid: 81c110d6c764d1643bb261b60035f983,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c110d6c764d1643bb261b60035f983, type: 3}
 --- !u!1001 &2204400184616826395
@@ -511,18 +506,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1156317432, guid: 7355a5571c851644895ace6be16d9d02, type: 3}
-      propertyPath: hitFX
-      value: 
-      objectReference: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
-    - target: {fileID: 1983237263, guid: 7355a5571c851644895ace6be16d9d02, type: 3}
-      propertyPath: hitFX
-      value: 
-      objectReference: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
-    - target: {fileID: 2078597039, guid: 7355a5571c851644895ace6be16d9d02, type: 3}
-      propertyPath: hitFX
-      value: 
-      objectReference: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
     - target: {fileID: 2204400183459985404, guid: 7355a5571c851644895ace6be16d9d02,
         type: 3}
       propertyPath: m_LocalPosition.x

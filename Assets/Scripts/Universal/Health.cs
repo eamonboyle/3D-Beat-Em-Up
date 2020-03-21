@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
             // if is player deactivate enemy script
             if (isPlayer)
             {
+                GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;
             }
 
             return;
@@ -42,27 +43,27 @@ public class Health : MonoBehaviour
 
         if (isPlayer)
         {
-            if (knockDown)
-            {
-                if (Random.Range(0, 5) == 4)
-                {
-                    animationScript.KnockDown();
-                }
-                else
-                {
-                    if (Random.Range(0, 3) > 1)
-                    {
-                        animationScript.Hit();
-                    }
-                }
-            }
-            else
-            {
+            //if (knockDown)
+            //{
+            //    if (Random.Range(0, 5) == 4)
+            //    {
+            //        animationScript.KnockDown();
+            //    }
+            //    else
+            //    {
+            //        if (Random.Range(0, 3) > 1)
+            //        {
+            //            animationScript.Hit();
+            //        }
+            //    }
+            //}
+            //else
+            //{
                 if (Random.Range(0, 3) > 1)
                 {
                     animationScript.Hit();
                 }
-            }
+            //}
         }
 
         if (!isPlayer)

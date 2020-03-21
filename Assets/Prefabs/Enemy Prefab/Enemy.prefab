@@ -50,7 +50,7 @@ MonoBehaviour:
   damage: 2
   isPlayer: 0
   isEnemy: 1
-  hitFX: {fileID: 0}
+  hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &1983237261
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   damage: 2
   isPlayer: 0
   isEnemy: 1
-  hitFX: {fileID: 0}
+  hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &2078597037
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   damage: 2
   isPlayer: 0
   isEnemy: 1
-  hitFX: {fileID: 0}
+  hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!82 &1578501209
 AudioSource:
   m_ObjectHideFlags: 0
@@ -274,8 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftArmAttackPoint: {fileID: 1983237261}
-  rightArmAttackPoint: {fileID: 1156317430}
   leftLegAttackPoint: {fileID: 0}
+  rightArmAttackPoint: {fileID: 1156317430}
   rightLegAttackPoint: {fileID: 2078597037}
   standUpTimer: 2
   whooshSound: {fileID: 8300000, guid: 8860bf5670b9a194399e02ed0a8de8d8, type: 3}
@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.8
   attackDistance: 1
+  chasePlayerAfterAttack: 0.2
 --- !u!114 &1245979810
 MonoBehaviour:
   m_ObjectHideFlags: 0

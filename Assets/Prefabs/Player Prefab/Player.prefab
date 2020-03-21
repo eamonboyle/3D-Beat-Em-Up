@@ -47,7 +47,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -98,7 +98,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -149,7 +149,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -200,7 +200,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   radius: 1
-  damage: 2
+  damage: 5
   isPlayer: 1
   isEnemy: 0
   hitFX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -419,8 +419,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftArmAttackPoint: {fileID: 2587800}
-  rightArmAttackPoint: {fileID: 142680539}
   leftLegAttackPoint: {fileID: 827457656}
+  rightArmAttackPoint: {fileID: 142680539}
   rightLegAttackPoint: {fileID: 1603004560}
   standUpTimer: 2
   whooshSound: {fileID: 8300000, guid: 8860bf5670b9a194399e02ed0a8de8d8, type: 3}
@@ -449,6 +449,10 @@ PrefabInstance:
     - target: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
       propertyPath: m_Name
       value: PlayerChild
+      objectReference: {fileID: 0}
+    - target: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
       propertyPath: m_LocalRotation.y
