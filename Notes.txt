@@ -1,0 +1,8 @@
+What to add:
+
+Enemy Healthbars
+Score counter
+Boss?
+Multiple enemies at once?
+Menu
+Settings
