@@ -13,9 +13,22 @@ public class CharacterAnimationDelegate : MonoBehaviour
 
     private CharacterAnimation animationScript;
 
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip whooshSound, fallSound, groundHitSound, deathSound;
+
+    private EnemyMovement enemyMovement;
+
     private void Awake()
     {
         animationScript = GetComponent<CharacterAnimation>();
+        audioSource = GetComponent<AudioSource>();
+
+        if (gameObject.CompareTag(Tags.ENEMY_TAG))
+        {
+            enemyMovement = GetComponentInParent<EnemyMovement>();
+        }
     }
 
     void LeftArmAttackOn()
@@ -99,5 +112,45 @@ public class CharacterAnimationDelegate : MonoBehaviour
     {
         yield return new WaitForSeconds(standUpTimer);
         animationScript.StandUp();
+    }
+
+    public void Attack_SFX()
+    {
+        audioSource.volume = 0.2f;
+        audioSource.clip = whooshSound;
+        audioSource.Play();
+    }
+
+    public void CharacterDeath_SFX()
+    {
+        audioSource.volume = 1f;
+        audioSource.clip = deathSound;
+        audioSource.Play();
+    }
+
+    public void EnemyKnockedDown_SFX()
+    {
+        audioSource.clip = fallSound;
+        audioSource.Play();
+    }
+
+    public void EnemyHitGround_SFX()
+    {
+        audioSource.clip = groundHitSound;
+        audioSource.Play();
+    }
+
+    void DisableMovement()
+    {
+        enemyMovement.enabled = false;
+
+        transform.parent.gameObject.layer = 0;
+    }
+
+    void EnableMovement()
+    {
+        enemyMovement.enabled = true;
+
+        transform.parent.gameObject.layer = 9;
     }
 }
