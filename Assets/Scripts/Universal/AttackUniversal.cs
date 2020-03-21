@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AttackUniversal : MonoBehaviour
 {
@@ -50,6 +47,26 @@ public class AttackUniversal : MonoBehaviour
                 {
                     hit[0].GetComponent<Health>().ApplyDamage(damage, false);
                 }
+            }
+
+            if (isEnemy)
+            {
+                // add the effect
+                Vector3 hitFXPos = hit[0].transform.position;
+                hitFXPos.y += 1.3f;
+
+                if (hit[0].transform.forward.x > 0)
+                {
+                    hitFXPos.x += 0.3f;
+                }
+                else if (hit[0].transform.forward.x < 0)
+                {
+                    hitFXPos.x -= 0.3f;
+                }
+
+                Instantiate(hitFX, hitFXPos, Quaternion.identity);
+
+                hit[0].GetComponent<Health>().ApplyDamage(damage, true);
             }
 
             gameObject.SetActive(false); // if we have a hit

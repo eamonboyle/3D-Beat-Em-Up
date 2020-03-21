@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Health : MonoBehaviour
 {
@@ -37,10 +35,34 @@ public class Health : MonoBehaviour
             // if is player deactivate enemy script
             if (isPlayer)
             {
-
             }
 
             return;
+        }
+
+        if (isPlayer)
+        {
+            if (knockDown)
+            {
+                if (Random.Range(0, 5) == 4)
+                {
+                    animationScript.KnockDown();
+                }
+                else
+                {
+                    if (Random.Range(0, 3) > 1)
+                    {
+                        animationScript.Hit();
+                    }
+                }
+            }
+            else
+            {
+                if (Random.Range(0, 3) > 1)
+                {
+                    animationScript.Hit();
+                }
+            }
         }
 
         if (!isPlayer)
@@ -54,7 +76,7 @@ public class Health : MonoBehaviour
             }
             else
             {
-                if (Random.Range(0,3) > 1)
+                if (Random.Range(0, 3) > 1)
                 {
                     animationScript.Hit();
                 }

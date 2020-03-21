@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShakeCamera : MonoBehaviour
 {
@@ -14,19 +12,19 @@ public class ShakeCamera : MonoBehaviour
     private Vector3 startPosition;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         startPosition = transform.localPosition;
         initialDuration = duration;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Shake();   
+        Shake();
     }
 
-    void Shake()
+    private void Shake()
     {
         if (shouldShake)
         {
