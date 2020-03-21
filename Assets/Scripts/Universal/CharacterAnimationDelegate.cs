@@ -37,6 +37,11 @@ public class CharacterAnimationDelegate : MonoBehaviour
 
     void LeftLegAttackPointOn()
     {
+            leftLegAttackPoint.SetActive(true);
+    }
+
+    void LeftLegAttackPointOff()
+    {
         if (leftLegAttackPoint.activeInHierarchy)
         {
             leftLegAttackPoint.SetActive(false);
@@ -44,6 +49,11 @@ public class CharacterAnimationDelegate : MonoBehaviour
     }
 
     void RightLegAttackPointOn()
+    {
+        rightLegAttackPoint.SetActive(true);
+    }
+
+    void RightLegAttackPointOff()
     {
         if (rightLegAttackPoint.activeInHierarchy)
         {
