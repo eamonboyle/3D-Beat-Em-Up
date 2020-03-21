@@ -20,10 +20,13 @@ public class CharacterAnimationDelegate : MonoBehaviour
 
     private EnemyMovement enemyMovement;
 
+    private ShakeCamera shakeCamera;
+
     private void Awake()
     {
         animationScript = GetComponent<CharacterAnimation>();
         audioSource = GetComponent<AudioSource>();
+        shakeCamera = GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
 
         if (gameObject.CompareTag(Tags.ENEMY_TAG))
         {
@@ -152,5 +155,10 @@ public class CharacterAnimationDelegate : MonoBehaviour
         enemyMovement.enabled = true;
 
         transform.parent.gameObject.layer = 9;
+    }
+
+    void ShakeCameraOnFall()
+    {
+        shakeCamera.ShouldShake = true;
     }
 }
