@@ -4,15 +4,61 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float health = 100f;
+
+    private CharacterAnimation animationScript;
+    private EnemyMovement enemyMovement;
+
+    private bool characterDie;
+
+    public bool isPlayer;
+
+    private void Awake()
     {
-        
+        animationScript = GetComponentInChildren<CharacterAnimation>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ApplyDamage(float damage, bool knockDown)
     {
-        
+        if (characterDie)
+        {
+            return;
+        }
+
+        health -= damage;
+
+        // display health UI
+
+        if (health <= 0f)
+        {
+            animationScript.Death();
+            characterDie = true;
+
+            // if is player deactivate enemy script
+            if (isPlayer)
+            {
+
+            }
+
+            return;
+        }
+
+        if (!isPlayer)
+        {
+            if (knockDown)
+            {
+                if (Random.Range(0, 2) > 0)
+                {
+                    animationScript.KnockDown();
+                }
+            }
+            else
+            {
+                if (Random.Range(0,3) > 1)
+                {
+                    animationScript.Hit();
+                }
+            }
+        }
     }
 }

@@ -9,6 +9,15 @@ public class CharacterAnimationDelegate : MonoBehaviour
     public GameObject leftLegAttackPoint;
     public GameObject rightLegAttackPoint;
 
+    public float standUpTimer = 2f;
+
+    private CharacterAnimation animationScript;
+
+    private void Awake()
+    {
+        animationScript = GetComponent<CharacterAnimation>();
+    }
+
     void LeftArmAttackOn()
     {
         leftArmAttackPoint.SetActive(true);
@@ -59,5 +68,36 @@ public class CharacterAnimationDelegate : MonoBehaviour
         {
             rightLegAttackPoint.SetActive(false);
         }
+    }
+
+    void TagLeft_Arm()
+    {
+        leftArmAttackPoint.tag = Tags.LEFT_ARM_TAG;
+    }
+
+    void UntagLeft_Arm()
+    {
+        leftArmAttackPoint.tag = Tags.UNTAGGED_TAG;
+    }
+
+    void TagLeft_Leg()
+    {
+        leftLegAttackPoint.tag = Tags.LEFT_LEG_TAG;
+    }
+
+    void UntagLeft_Leg()
+    {
+        leftLegAttackPoint.tag = Tags.UNTAGGED_TAG;
+    }
+
+    void Enemy_StandUp()
+    {
+        StartCoroutine(StandUpAfterTime());
+    }
+
+    IEnumerator StandUpAfterTime()
+    {
+        yield return new WaitForSeconds(standUpTimer);
+        animationScript.StandUp();
     }
 }
